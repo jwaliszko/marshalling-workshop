@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSClient", "CSClient\CSClient.csproj", "{E34EE6EA-7451-496C-9FB4-676FD3E83731}"
+	ProjectSection(ProjectDependencies) = postProject
+		{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F} = {113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CPPServer", "CPPServer\CPPServer.vcxproj", "{FD34F272-DF03-4B91-A944-DC291006610A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CLIBridge", "CLIBridge\CLIBridge.vcxproj", "{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FD34F272-DF03-4B91-A944-DC291006610A} = {FD34F272-DF03-4B91-A944-DC291006610A}
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSServer", "FSServer\FSServer.fsproj", "{9216C8BD-276E-4B4F-8666-7D7E27F72851}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E34EE6EA-7451-496C-9FB4-676FD3E83731}.Debug|x64.ActiveCfg = Debug|x64
+		{E34EE6EA-7451-496C-9FB4-676FD3E83731}.Debug|x64.Build.0 = Debug|x64
+		{E34EE6EA-7451-496C-9FB4-676FD3E83731}.Debug|x86.ActiveCfg = Debug|x86
+		{E34EE6EA-7451-496C-9FB4-676FD3E83731}.Debug|x86.Build.0 = Debug|x86
+		{E34EE6EA-7451-496C-9FB4-676FD3E83731}.Release|x64.ActiveCfg = Release|Any CPU
+		{E34EE6EA-7451-496C-9FB4-676FD3E83731}.Release|x64.Build.0 = Release|Any CPU
+		{E34EE6EA-7451-496C-9FB4-676FD3E83731}.Release|x86.ActiveCfg = Release|Any CPU
+		{E34EE6EA-7451-496C-9FB4-676FD3E83731}.Release|x86.Build.0 = Release|Any CPU
+		{FD34F272-DF03-4B91-A944-DC291006610A}.Debug|x64.ActiveCfg = Debug|x64
+		{FD34F272-DF03-4B91-A944-DC291006610A}.Debug|x64.Build.0 = Debug|x64
+		{FD34F272-DF03-4B91-A944-DC291006610A}.Debug|x86.ActiveCfg = Debug|Win32
+		{FD34F272-DF03-4B91-A944-DC291006610A}.Debug|x86.Build.0 = Debug|Win32
+		{FD34F272-DF03-4B91-A944-DC291006610A}.Release|x64.ActiveCfg = Release|x64
+		{FD34F272-DF03-4B91-A944-DC291006610A}.Release|x64.Build.0 = Release|x64
+		{FD34F272-DF03-4B91-A944-DC291006610A}.Release|x86.ActiveCfg = Release|Win32
+		{FD34F272-DF03-4B91-A944-DC291006610A}.Release|x86.Build.0 = Release|Win32
+		{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}.Debug|x64.ActiveCfg = Debug|x64
+		{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}.Debug|x64.Build.0 = Debug|x64
+		{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}.Debug|x86.ActiveCfg = Debug|Win32
+		{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}.Debug|x86.Build.0 = Debug|Win32
+		{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}.Release|x64.ActiveCfg = Release|x64
+		{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}.Release|x64.Build.0 = Release|x64
+		{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}.Release|x86.ActiveCfg = Release|Win32
+		{113ACF6B-101B-4A68-9F3E-4BAC43F7C93F}.Release|x86.Build.0 = Release|Win32
+		{9216C8BD-276E-4B4F-8666-7D7E27F72851}.Debug|x64.ActiveCfg = Debug|x64
+		{9216C8BD-276E-4B4F-8666-7D7E27F72851}.Debug|x64.Build.0 = Debug|x64
+		{9216C8BD-276E-4B4F-8666-7D7E27F72851}.Debug|x86.ActiveCfg = Debug|x86
+		{9216C8BD-276E-4B4F-8666-7D7E27F72851}.Debug|x86.Build.0 = Debug|x86
+		{9216C8BD-276E-4B4F-8666-7D7E27F72851}.Release|x64.ActiveCfg = Release|Any CPU
+		{9216C8BD-276E-4B4F-8666-7D7E27F72851}.Release|x64.Build.0 = Release|Any CPU
+		{9216C8BD-276E-4B4F-8666-7D7E27F72851}.Release|x86.ActiveCfg = Release|Any CPU
+		{9216C8BD-276E-4B4F-8666-7D7E27F72851}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
