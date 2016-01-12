@@ -9,7 +9,8 @@ namespace CSClient
 
     public partial class MainWindow : Window
     {
-        private static int _counter;
+        private static int _cplusCounter;
+        private static int _fSharpCounter;
 
         public MainWindow()
         {
@@ -21,19 +22,23 @@ namespace CSClient
             using (var bridge = new CLIBridge())
             {
                 bridge.SetDelay(3000);
-                bridge.SetInput("response " + _counter++);
+                bridge.SetInput("C++response " + _cplusCounter++);
                 Debug.WriteLine("before await");
-                tbScreen.Text += "in progress...\n";
+                tbScreen.Text += "C++ in progress...\n";
                 var result = await bridge.ReturnInputAsync();
                 Debug.WriteLine("after await");
                 tbScreen.Text += result + "\n";
             }
         }
 
-        private void btDownload_ClickF(object sender, RoutedEventArgs e)
+        private async void btDownload_ClickF(object sender, RoutedEventArgs e)
         {
+            tbScreen.Text += "F# in progress...\n";
             var server = new FSServer.FSServer();
-            tbScreen.Text += server.returnInput();
+            server.Delay = 4050;
+            server.Input = "F#response " + _fSharpCounter++;
+            var result = await server.returnInputAsync();
+            tbScreen.Text += result + "\n";
         }
     }
 }

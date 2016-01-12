@@ -7,8 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBlock x:Name="tbScreen" />
-        <Button x:Name="btDownloadCLI" Content="CPP/CLI" Margin="322,279,10,10" Click="btDownload_ClickCLI" />
-        <Button x:Name="btDownloadF" Content="F#" Margin="322,243,10,46" Click="btDownload_ClickF" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <ScrollViewer>
+            <TextBlock x:Name="tbScreen"   />
+        </ScrollViewer>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0" x:Name="btDownloadCLI" Content="CPP/CLI" Margin="4" Click="btDownload_ClickCLI" />
+            <Button Grid.Row="1" x:Name="btDownloadF" Content="F#" Margin="4" Click="btDownload_ClickF" />
+        </Grid>
     </Grid>
 </Window>
